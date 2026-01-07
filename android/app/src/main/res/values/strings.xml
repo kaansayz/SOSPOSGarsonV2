@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">SOSPOS Garson</string>
+    
+    <!-- Login Activity -->
+    <string name="login_title">Giriş Yap</string>
+    <string name="username">Kullanıcı Adı</string>
+    <string name="password">Şifre</string>
+    <string name="login">Giriş</string>
+    <string name="login_error">Giriş başarısız. Lütfen bilgilerinizi kontrol edin.</string>
+    
+    <!-- Main Activity -->
+    <string name="main_title">Masalar</string>
+    <string name="table_empty">Boş</string>
+    <string name="table_occupied">Dolu</string>
+    <string name="logout">Çıkış</string>
+    
+    <!-- Table Activity -->
+    <string name="table_title">Masa %1$d</string>
+    <string name="add_order">Sipariş Ekle</string>
+    <string name="current_orders">Mevcut Siparişler</string>
+    <string name="send_to_kitchen">Mutfağa Gönder</string>
+    <string name="close_table">Masayı Kapat</string>
+    <string name="total">Toplam: %1$.2f TL</string>
+    
+    <!-- Menu Activity -->
+    <string name="menu_title">Menü</string>
+    <string name="add_to_order">Siparişe Ekle</string>
+    <string name="quantity">Adet</string>
+    <string name="price">Fiyat: %1$.2f TL</string>
+    <string name="category_all">Tümü</string>
+    <string name="category_food">Yemek</string>
+    <string name="category_drink">İçecek</string>
+    <string name="category_dessert">Tatlı</string>
+    
+    <!-- Order Item -->
+    <string name="item_quantity">%1$dx</string>
+    <string name="item_price">%1$.2f TL</string>
+    <string name="order_status_pending">Bekliyor</string>
+    <string name="order_status_preparing">Hazırlanıyor</string>
+    <string name="order_status_ready">Hazır</string>
+    <string name="order_status_delivered">Teslim Edildi</string>
+    
+    <!-- Messages -->
+    <string name="error_network">Bağlantı hatası. Lütfen internet bağlantınızı kontrol edin.</string>
+    <string name="error_server">Sunucu hatası. Lütfen daha sonra tekrar deneyin.</string>
+    <string name="success_order_sent">Sipariş mutfağa gönderildi</string>
+    <string name="success_table_closed">Masa kapatıldı</string>
+    <string name="confirm_send_order">Siparişleri mutfağa göndermek istiyor musunuz?</string>
+    <string name="confirm_close_table">Masayı kapatmak istiyor musunuz?</string>
+    <string name="yes">Evet</string>
+    <string name="no">Hayır</string>
+</resources>
