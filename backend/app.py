@@ -6,6 +6,17 @@ import json
 app = Flask(__name__)
 CORS(app)
 
+# ============================================================================
+# WARNING: This is a DEVELOPMENT/DEMO application
+# ============================================================================
+# SECURITY NOTICE: The following security issues exist in this demo:
+# 1. Passwords are stored in plain text (use bcrypt/argon2 in production)
+# 2. No JWT/session management (implement proper auth in production)
+# 3. In-memory database (use PostgreSQL/MySQL in production)
+# 4. No input sanitization (validate all inputs in production)
+# 5. No rate limiting (add rate limiting in production)
+# ============================================================================
+
 # In-memory database (replace with real database in production)
 users = [
     {"id": 1, "username": "garson1", "password": "123456", "role": "waiter"},
@@ -82,6 +93,14 @@ def index():
 @app.route('/api/login', methods=['POST'])
 def login():
     data = request.json
+    
+    # Validate input
+    if not data or not data.get('username') or not data.get('password'):
+        return jsonify({
+            "success": False,
+            "message": "Kullanıcı adı ve şifre gerekli"
+        }), 400
+    
     username = data.get('username')
     password = data.get('password')
     
@@ -349,4 +368,7 @@ def delete_order(order_id):
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=5000, debug=True)
+    # Note: In production, set debug=False and use a proper WSGI server like Gunicorn
+    import os
+    debug_mode = os.environ.get('FLASK_DEBUG', 'True') == 'True'
+    app.run(host='0.0.0.0', port=5000, debug=debug_mode)

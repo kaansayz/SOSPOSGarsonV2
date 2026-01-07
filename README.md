@@ -176,9 +176,16 @@ SOSPOSGarsonV2/
 
 ## 📝 Notlar
 
+- **⚠️ GÜVENLIK UYARISI**: Bu uygulama eğitim/demo amaçlıdır. Production ortamında kullanmadan önce aşağıdaki güvenlik önlemlerini alın:
+  - Şifreleri bcrypt/argon2 ile hashleyin
+  - JWT token authentication'ı tam olarak implement edin
+  - Gerçek bir veritabanı kullanın (PostgreSQL, MySQL, MongoDB)
+  - Input validation ve sanitization ekleyin
+  - Rate limiting uygulayın
+  - HTTPS kullanın
+  - Environment variables ile configuration yönetin
+  
 - Backend şu an in-memory database kullanmaktadır. Production ortamında PostgreSQL, MySQL veya MongoDB gibi gerçek bir veritabanı kullanılmalıdır.
-- Güvenlik için JWT token authentication'ı tam olarak implement edilmelidir.
-- Production ortamında HTTPS kullanılmalıdır.
 - Emulator'de test edilirken `10.0.2.2` IP adresi localhost'u temsil eder.
 
 ## 🚀 Geliştirme
